@@ -3,7 +3,7 @@
 # Table name: flights
 #
 #  id          :integer          not null, primary key
-#  alert_sent  :boolean
+#  alert_sent  :boolean          default(FALSE)
 #  departs_at  :datetime
 #  description :string
 #  created_at  :datetime         not null

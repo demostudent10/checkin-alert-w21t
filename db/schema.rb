@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_004442) do
   create_table "flights", force: :cascade do |t|
     t.string "description"
     t.datetime "departs_at"
-    t.boolean "alert_sent"
+    t.boolean "alert_sent", default: false
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
