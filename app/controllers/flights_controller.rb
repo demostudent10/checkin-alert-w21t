@@ -1,6 +1,8 @@
 class FlightsController < ApplicationController
   def index
-    matching_flights = Flight.all
+    # matching_flights = Flight.where({ :user_id => @current_user.id })
+
+    matching_flights = @current_user.flights
 
     @list_of_flights = matching_flights.order({ :created_at => :desc })
 
