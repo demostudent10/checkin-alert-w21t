@@ -11,4 +11,10 @@
 #  user_id     :integer
 #
 class Flight < ApplicationRecord
+
+  belongs_to :user
+
+  validates :user_id, uniqueness: { scope: ["departs_at"] }
+
+  validates :departs_at, presence: true
 end
