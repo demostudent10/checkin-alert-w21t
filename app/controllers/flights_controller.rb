@@ -23,8 +23,8 @@ class FlightsController < ApplicationController
     the_flight = Flight.new
     the_flight.description = params.fetch("query_description")
     the_flight.departs_at = params.fetch("query_departs_at")
-    the_flight.alert_sent = params.fetch("query_alert_sent", false)
-    the_flight.user_id = params.fetch("query_user_id")
+
+    the_flight.user_id = @current_user.id
 
     if the_flight.valid?
       the_flight.save
