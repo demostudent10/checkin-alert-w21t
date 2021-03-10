@@ -44,10 +44,6 @@
     <table>
       <tr>
         <th>
-          ID
-        </th>
-
-        <th>
           Description
         </th>
 
@@ -60,27 +56,11 @@
         </th>
 
         <th>
-          User
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
         </th>
       </tr>
 
       <% @list_of_flights.each do |a_flight| %>
       <tr>
-        <td>
-          <%= a_flight.id %>
-        </td>
-
         <td>
           <%= a_flight.description %>
         </td>
@@ -91,17 +71,6 @@
 
         <td>
           <%= a_flight.alert_sent %>
-        </td>
-
-        <td>
-          <%= a_flight.user_id %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_flight.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_flight.updated_at) %> ago
         </td>
 
         <td>
